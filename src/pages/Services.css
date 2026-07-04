@@ -1,0 +1,128 @@
+.page-hero {
+  padding: 72px 0 48px;
+  background: linear-gradient(180deg, #fff8ea 0%, var(--cream) 100%);
+}
+
+.page-hero h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  max-width: 760px;
+  margin-bottom: 16px;
+}
+
+.page-hero-desc {
+  max-width: 560px;
+  font-size: 16px;
+}
+
+.services-status {
+  margin-bottom: 32px;
+  color: var(--muted);
+}
+
+.services-status-error {
+  color: var(--coral);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.services-row-reverse {
+  grid-template-columns: 0.8fr 1fr;
+}
+
+.services-row-reverse .services-row-copy {
+  order: 2;
+}
+
+.service-icon-lg {
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+
+.services-row-copy h2 {
+  font-size: clamp(24px, 2.6vw, 32px);
+  margin-bottom: 14px;
+}
+
+.services-row-copy > p {
+  font-size: 15.5px;
+  margin-bottom: 22px;
+  max-width: 460px;
+}
+
+.services-features {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 460px;
+}
+
+.services-features li {
+  font-size: 14px;
+  color: var(--ink);
+  padding-left: 22px;
+  position: relative;
+}
+
+.services-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mint);
+  font-weight: 700;
+}
+
+.services-row-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.services-visual-card {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.services-visual-0 {
+  background: linear-gradient(135deg, var(--sun), var(--coral));
+}
+
+.services-visual-1 {
+  background: linear-gradient(135deg, var(--mint), #0f8f83);
+}
+
+.services-visual-2 {
+  background: linear-gradient(135deg, var(--ink), #35505b);
+}
+
+@media (max-width: 860px) {
+  .services-row,
+  .services-row-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .services-row-reverse .services-row-copy {
+    order: 0;
+  }
+
+  .services-features {
+    grid-template-columns: 1fr;
+  }
+}
